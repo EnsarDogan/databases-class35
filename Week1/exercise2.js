@@ -53,6 +53,11 @@ connection.query(
   showResults
 );
 
+connection.query(
+  "SELECT * FROM city ORDER BY Population DESC LIMIT 10",
+  showResults
+);
+
 connection.query("SELECT SUM(Population) FROM country", showResults);
 
 connection.end();
