@@ -46,7 +46,7 @@ async function seedDatabase() {
     (12, 'Radhi', 'Harvard University', '1989-01-01', 16, 'm', 3),
     (13, 'Osama', 'Marmara University', '1989-01-01', 17, 'm', 1),
     (14, 'Bashar', 'Oxford University', '1992-01-01', 12, 'm', 1),
-    (15, 'Nour', 'Harvard University', '1989-01-01', 20, 'm', F)`;
+    (15, 'Nour', 'Harvard University', '1989-01-01', 20, 'f', 2)`;
 
   connection.connect();
   try {
