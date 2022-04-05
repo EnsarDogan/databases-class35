@@ -30,3 +30,4 @@
 1. client-order-id primary key
 2. member_id foreign key
 3. dinner_id foreign key
+4. dinner_date
