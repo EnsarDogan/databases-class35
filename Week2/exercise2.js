@@ -28,7 +28,7 @@ async function seedDatabase() {
       PRIMARY KEY (paper_id, author_no)
     );`;
 
-  const INSERT_VALUES_RESEARCH_PAPERS = `
+  const INSERT_VALUES_RESEARCH_PAPERS_TABLE = `
     INSERT INTO research_Papers VALUES
         (1, 'HTML', 'Introduction to HTML', '2020-01-01'),
         (2, 'Head in HTML', 'Introduction to Head in HTML', '2020-01-02'),
