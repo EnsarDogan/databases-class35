@@ -34,16 +34,13 @@ function getPopulation(Country, name, code, cb) {
   );
 }
 
-// If it is not secured, then some malicious users type name: "asd 'OR' 1=1" and code: "asd 'OR' 1=1;" and get all the records on the tables.
+// If it is not secured, then some malicious users type Country: "asd 'OR' 1=1" name: "asd 'OR' 1=1" and code: "asd 'OR' 1=1;" and get all the records on the tables.
 
 // We can just change the function like this and with that way we can prevent malicious users getting all the records
 
 function getPopulation2(Country, name, code, cb) {
   connection.query(
-    `SELECT Population FROM ${Country} WHERE Name =` +
-      connection.escape(name) +
-      " and code =" +
-      connection.escape(code),
+    `SELECT Population FROM Country = ? WHERE Name = ? AND Code =?`,
     function (err, result) {
       if (err) cb(err);
       if (result.length == 0) cb(new Error("Not found"));

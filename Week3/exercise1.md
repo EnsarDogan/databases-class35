@@ -21,13 +21,26 @@
 
 1. dinner_id primary key
 2. venue_code
-3. venue_description
-4. food_code
-5. food_description
+3. dinner_date
+
+**Venues Info Table**
+
+1. venue-code primary key
+2. venue_description
+
+**Foods Info Table**
+
+1. food-code primary key
+2. food_description
+
+**Dinners_Food_Codes Table**
+
+1. dinners-food-codes-id primary key
+2. dinner id foreign key
+3. food_code foreign key
 
 **Client_Orders_Table**
 
 1. client-order-id primary key
 2. member_id foreign key
 3. dinner_id foreign key
-4. dinner_date
